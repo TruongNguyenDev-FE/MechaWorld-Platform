@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Popover overlay styling */
+.notification-popover .ant-popover-content {
+    @apply shadow-lg border border-gray-200;
+}
+
+.notification-popover .ant-popover-arrow {
+    @apply border-gray-200;
+}
+
+/* Custom scrollbar cho notification list */
+.notification-list-scroll::-webkit-scrollbar {
+    @apply w-1;
+}
+
+.notification-list-scroll::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded;
+}
+
+.notification-list-scroll::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded hover:bg-gray-400;
+}
+
+/* Animation cho notification items */
+.notification-item {
+    @apply transition-all duration-200 ease-in-out;
+}
+
+.notification-item:hover {
+    @apply transform scale-[1.02] shadow-sm;
+}
+
+/* Badge styling */
+.notification-badge .ant-badge-count {
+    @apply bg-red-500 border-white shadow-sm;
+}
+
+/* Bell icon animation */
+.notification-bell {
+    @apply transition-transform duration-200;
+}
+
+.notification-bell:hover {
+    @apply transform scale-110;
+}
+
+/* Notification status colors */
+.notification-unread {
+    @apply bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-400;
+}
+
+.notification-read {
+    @apply bg-white hover:bg-gray-50 border border-gray-100;
+}
+
+/* Type-specific colors */
+.notification-order {
+    @apply border-l-blue-400 bg-blue-50;
+}
+
+.notification-payment {
+    @apply border-l-green-400 bg-green-50;
+}
+
+.notification-promotion {
+    @apply border-l-orange-400 bg-orange-50;
+}
+
+.notification-system {
+    @apply border-l-purple-400 bg-purple-50;
+}
+
+/* Loading states */
+.notification-loading {
+    @apply animate-pulse bg-gray-100;
+}
+
+/* Empty state */
+.notification-empty {
+    @apply text-gray-400 py-8;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+    .notification-popover-mobile {
+        @apply w-[320px] max-h-[350px];
+    }
+
+    .notification-page-mobile {
+        @apply px-4 mt-20;
+    } }
